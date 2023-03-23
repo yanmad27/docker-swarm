@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app: 
+    image: 'yeasy/simple-web'
+    ports:
+      - '80:80'
+    networks:
+      - my-net
+    deploy: 
+      mode: replicated
+      replicas: 3
+networks: 
+  my-net:
+    driver: overlay
