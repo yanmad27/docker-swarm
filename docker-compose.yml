@@ -2,9 +2,9 @@ version: '3'
 
 services:
   app: 
-    image: 'abh1nav/dockerui:latest'
+    image: 'bitnami/grafana'
     ports:
-      - '5080:9000'
+      - '5080:3000'
     networks:
       - my-net
     deploy: 
